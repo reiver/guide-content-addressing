@@ -61,20 +61,21 @@ Resolving
 Project
 
 23. File Cloud (Basic)
-24. File Cloud (with Deleting)
+24. File Cloud (Replication)
+25. File Cloud (with Deleting)
 
 Other Content Addresses
 
-25. UUID
-26. UUID URN
-27. Chrono Random
-28. XIM
+26. UUID
+27. UUID URN
+28. Chrono Random
+29. XIM
 
 Project
 
-29. File Cloud (with Editing)
-30. File Cloud (Deleting updated)
+30. File Cloud (with Editing)
+31. File Cloud (Deleting updated)
 
 Project
 
-31. File Cloud (Self-Hosted)
+32. File Cloud (Self-Hosted)
