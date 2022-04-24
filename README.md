@@ -31,50 +31,50 @@ Content Integrity
 
 Digest Based Content Addresses
 
-5. Content Addresses
-6. Digest URN
-7. Magnet URI
-8. Named Information URI
-9. Trusty URI
-10. Hash URI
-11. Digest URI
+9. Content Addresses
+10. Digest URN
+11. Magnet URI
+12. Named Information URI
+13. Trusty URI
+14. Hash URI
+15. Digest URI
 
 File System
 
-12. Content Addressable Virtual File System
-13. Git
+16. Content Addressable Virtual File System
+17. Git
 
 Memory
 
-14. Hash Tables
+18. Hash Tables
 
 Network
 
-15. Distributed Hash Tables
+19. Distributed Hash Tables
 
 Resolving
 
-16. Content-Addressable Web
-17. Gnutella
-18. Named Information URI .well-known
+20. Content-Addressable Web
+21. Gnutella
+22. Named Information URI .well-known
 
 Project
 
-19. File Cloud (Basic)
-20. File Cloud (with Deleting)
+23. File Cloud (Basic)
+24. File Cloud (with Deleting)
 
 Other Content Addresses
 
-21. UUID
-22. UUID URN
-23. Chrono Random
-24. XIM
+25. UUID
+26. UUID URN
+27. Chrono Random
+28. XIM
 
 Project
 
-25. File Cloud (with Editing)
-26. File Cloud (Deleting updated)
+29. File Cloud (with Editing)
+30. File Cloud (Deleting updated)
 
 Project
 
-27. File Cloud (Self-Hosted)
+31. File Cloud (Self-Hosted)
