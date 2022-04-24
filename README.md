@@ -12,7 +12,7 @@ This is a **guide** on **content addressing**.
 
 ## Prerequisites
 
-Before you attempt this guide should first understand **hashing**, **hash functions**, and **digests** — one way to learn those is with my [hashing guide](https://github.com/reiver/guide-hashing). If you don't already understand **hashing**, **hash functions**, and **digests**, then go learn what is at that guide first, and then come back here.
+Before you attempt this guide you should first understand **hashing**, **hash functions**, and **digests** — one way to learn those is with my [hashing guide](https://github.com/reiver/guide-hashing). If you don't already understand **hashing**, **hash functions**, and **digests**, then go learn what is at that guide first, and then come back here.
 
 ## Table of Contents
 
@@ -24,58 +24,79 @@ Content Integrity
 
 3. Digest Fingerprinting
 4. File Transferring
-5. HTTP Content-MD5
-6. HTTP Digest
-7. HTTP Content-Digest
-8. HTTP Repr-Digest
+
+Project
+
+5. crypticon Program
+
+HTTP Content Integrity
+
+6. HTTP Content-MD5
+7. HTTP Digest
+8. HTTP Content-Digest
+9. HTTP Repr-Digest
+
+Project
+
+10. download Program
 
 Digest Based Content Addresses
 
-9. Content Addresses
-10. Digest URN
-11. Magnet URI
-12. Named Information URI
-13. Trusty URI
-14. Hash URI
-15. Digest URI
+11. Content Addresses
+12. Digest URN
+13. Magnet URI
+14. Named Information URI
+15. Trusty URI
+16. Hash URI
+17. Digest URI
+
+Project
+
+18. crypticon Program (updated)
 
 File System
 
-16. Content Addressable Virtual File System
-17. Git
+19. Content Addressable Virtual File System
+20. Git
 
 Memory
 
-18. Hash Tables
+21. Content Addressable Data Structure
+
+Project
+
+22. File Cloud (Basic)
+23. File Cloud (Replication)
+24. File Cloud (with Deleting)
+
 
 Network
 
-19. Distributed Hash Tables
+25. Distributed Content Addressing
 
 Resolving
 
-20. Content-Addressable Web
-21. Gnutella
-22. Named Information URI .well-known
+26. Content-Addressable Web
+27. Gnutella
+28. Named Information URI .well-known
 
-Project
+Keys & Values
 
-23. File Cloud (Basic)
-24. File Cloud (Replication)
-25. File Cloud (with Deleting)
+29. Hash Tables
+30. Distribued Hash Tables
 
 Other Content Addresses
 
-26. UUID
-27. UUID URN
-28. Chrono Random
-29. XIM
+31. UUID
+32. UUID URN
+33. Chrono Random
+34. XIM
 
 Project
 
-30. File Cloud (with Editing)
-31. File Cloud (Deleting updated)
+35. File Cloud (with Editing)
+36. File Cloud (Deleting updated)
 
 Project
 
-32. File Cloud (Self-Hosted)
+37. File Cloud (Self-Hosted)
