@@ -16,7 +16,6 @@ Before you attempt this guide should first understand **hashing**, **hash functi
 
 ## Table of Contents
 
-
 0. Getting Started
 1. Examples
 2. Introduction
@@ -57,3 +56,11 @@ Resolving
 
 16. Content-Addressable Web
 17. Gnutella
+18. Named Information URI .well-known
+
+Project
+
+19. File Cloud (Basic)
+20. File Cloud (with Deleting)
+21. File Cloud (with Editing)
+22. File Cloud (Self-Hosted)
