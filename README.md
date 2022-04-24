@@ -93,7 +93,7 @@ Keys & Values
 
 Other Content Addresses
 
-32. UUID
+32. [UUID](chapters/uuid/README.md)
 33. UUID URN
 34. Chrono Random
 35. XIM
