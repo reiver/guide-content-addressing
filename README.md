@@ -23,11 +23,14 @@ Before you attempt this guide you should first understand **hashing**, **hash fu
 Content Integrity
 
 3. Digest Fingerprinting
-4. File Transferring
 
 Project
 
-5. crypticon Program
+4. crypticon Program (digest)
+
+Content Integrity
+
+5. File Transferring
 
 HTTP Content Integrity
 
@@ -56,7 +59,7 @@ Digest Based Content Addresses
 
 Project
 
-19. crypticon Program (digest based content addressing)
+19. crypticon Program (content addresses)
 
 File System
 
@@ -69,10 +72,9 @@ Memory
 
 Project
 
-23. File Cloud (Basic)
-24. File Cloud (Replication)
-25. File Cloud (with Deleting)
-
+23. File Mesh (Basic)
+24. File Mesh (Replication)
+25. File Mesh (with Deleting)
 
 Network
 
@@ -98,9 +100,14 @@ Other Content Addresses
 
 Project
 
-36. File Cloud (with Editing)
-37. File Cloud (Deleting updated)
+36. File Mesh (with Editing)
+37. File Mesh (Deleting updated)
 
 Project
 
-38. File Cloud (Self-Hosted)
+38. File Mesh (Meta Data)
+39. File Mesh (Indexing)
+
+Project
+
+40. File Mesh (Self-Hosted)
