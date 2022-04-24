@@ -32,7 +32,7 @@ Content Integrity
 Digest Based Content Addresses
 
 5. Content Addresses
-6. URN
+6. Digest URN
 7. Magnet URI
 8. Named Information URI
 9. Trusty URI
@@ -62,5 +62,19 @@ Project
 
 19. File Cloud (Basic)
 20. File Cloud (with Deleting)
-21. File Cloud (with Editing)
-22. File Cloud (Self-Hosted)
+
+Other Content Addresses
+
+21. UUID
+22. UUID URN
+23. Chrono Random
+24. XIM
+
+Project
+
+25. File Cloud (with Editing)
+26. File Cloud (Deleting updated)
+
+Project
+
+27. File Cloud (Self-Hosted)
