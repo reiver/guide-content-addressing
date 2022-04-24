@@ -29,7 +29,7 @@ Content Integrity
 7. HTTP Content-Digest
 8. HTTP Repr-Digest
 
-Content Addresses
+Digest Based Content Addresses
 
 5. Content Addresses
 6. URN
