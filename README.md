@@ -38,65 +38,69 @@ HTTP Content Integrity
 
 Project
 
-10. download Program
+10. download Program (HTTP)
+
+Project
+
+11. upload Program (HTTP)
 
 Digest Based Content Addresses
 
-11. Content Addresses
-12. Digest URN
-13. Magnet URI
-14. Named Information URI
-15. Trusty URI
-16. Hash URI
-17. Digest URI
+12. Content Addresses
+13. Digest URN
+14. Magnet URI
+15. Named Information URI
+16. Trusty URI
+17. Hash URI
+18. Digest URI
 
 Project
 
-18. crypticon Program (updated)
+19. crypticon Program (digest based content addressing)
 
 File System
 
-19. Content Addressable Virtual File System
-20. Git
+20. Content Addressable Virtual File System
+21. Git
 
 Memory
 
-21. Content Addressable Data Structure
+22. Content Addressable Data Structure
 
 Project
 
-22. File Cloud (Basic)
-23. File Cloud (Replication)
-24. File Cloud (with Deleting)
+23. File Cloud (Basic)
+24. File Cloud (Replication)
+25. File Cloud (with Deleting)
 
 
 Network
 
-25. Distributed Content Addressing
+26. Distributed Content Addressing
 
 Resolving
 
-26. Content-Addressable Web
-27. Gnutella
-28. Named Information URI .well-known
+27. Content-Addressable Web
+28. Gnutella
+29. Named Information URI .well-known
 
 Keys & Values
 
-29. Hash Tables
-30. Distribued Hash Tables
+30. Hash Tables
+31. Distribued Hash Tables
 
 Other Content Addresses
 
-31. UUID
-32. UUID URN
-33. Chrono Random
-34. XIM
+32. UUID
+33. UUID URN
+34. Chrono Random
+35. XIM
 
 Project
 
-35. File Cloud (with Editing)
-36. File Cloud (Deleting updated)
+36. File Cloud (with Editing)
+37. File Cloud (Deleting updated)
 
 Project
 
-37. File Cloud (Self-Hosted)
+38. File Cloud (Self-Hosted)
