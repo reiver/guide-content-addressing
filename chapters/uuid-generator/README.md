@@ -4,12 +4,13 @@ by [Charles Iliya Krempeaux](http://changelog.ca/)
 
 ---
 
-**UUID**s (short for **universally unique identifiers**) are a convention used by some to create **globally unique identifiers** (**GUID**s).
+**UUID** (short for **universally unique identifier**) is a convention used by some to create **globally unique identifiers** (**GUID**s).
 
-There are other conventions for creating **globally unique identifiers** (**GUID**s) too, that are _not_ **UUID**.
+There are other conventions for creating **globally unique identifiers** (**GUID**s) too, that are _not_ **UUID**s.
+(You can even make up your own convention.) 
 But in this chapter we will focus on **UUID**s.
 
-And more specifically, we are going to focus on how we can generate our own **UUID**s.
+And more specifically, we are going to focus on generating our own **UUID**s.
 
 **And you are going to write code to make this happen!**
 
@@ -21,12 +22,14 @@ So, for example, if you were on `github.com` and your username was `joeblow`, th
 ```
 https://github.com/jowblow/go-uuid
 ```
+
 ## Type
 
-You are going to create a type that represents the **UUID**.
+You are going to create a type that represents a **UUID**.
 
 And you are going to store the **UUID** efficiently as binary!
-(This is imporant!)
+(This, storing the **UUID** as binary, is imporant!)
+
 So:
 ```golang
 package uuid
@@ -56,6 +59,29 @@ Your implementation should do the following:
 №2: set the most-significant 4-bits of `uuid.UUID.values[6]` to `0b0100`,
 
 №3: set the most-significant 2 bits of `uuid.UUID.values[8]` to `0b10`
+
+## Unit Tests for Random
+
+Also, write _unit tests_ for your `uuid.Random()` function, making sure that:
+
+* `uuid.UUID.values[6] & 0xf0` is equal to `0xf0`, and that 
+* `uuid.UUID.values[8] & 0xc0` is equal to `0x80`,
+
+… for any **UUID** that is returned from your `uuid.Random()` function.
+
+Obviously this _unit test_ isn't going to test _all_ values returned from your `uuid.Random()` function. But you can test a fix number of samples from your `uuid.Random()` function. I.e., something like:
+```golang
+func TestRandom(t *testing.T) {
+
+	const maxTests = 64
+
+	for testNumber:=0; testNumber<maxTests; testNumber++ {
+		var actual UUID = Random()
+		
+		//@TODO
+	}
+}
+```
 
 ## fmt.Stringer
 
