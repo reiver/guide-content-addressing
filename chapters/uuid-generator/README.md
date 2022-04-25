@@ -113,6 +113,9 @@ func (receiver *UUID) MarshalText() (text []byte, err error) {
 }
 ```
 
+This will return your **UUID** in the **canonical** format for **UUID**s.
+So, it will be similar to your `String()` method.
+
 ## encoding.TextUnmarshaler
 
 Make your `uuid.UUID` type implement the [encoding.TextUnmarshaler](https://pkg.go.dev/encoding#TextUnmarshaler) interface:
@@ -121,6 +124,34 @@ Make your `uuid.UUID` type implement the [encoding.TextUnmarshaler](https://pkg.
 package uuid 
 
 func (receiver *UUID) UnmarshalText(text []byte) error {
+	//@TODO
+}
+```
+
+This will accept a **UUID** in the **canonical** format for **UUID**.
+
+That means this `UnmarshalText()` method will need to make sure the value it is given as input is actually a **UUID**, and if not return an error.
+
+## encoding.BinaryMarshaler
+
+Make your `uuid.UUID` type implement the [encoding.BinaryMarshaler](https://pkg.go.dev/encoding#BinaryMarshaler) interface:
+
+```golang
+package uuid 
+
+func (receiver *UUID) MarshalBinary() (text []byte, err error) {
+	//@TODO
+}
+```
+
+## encoding.BinaryUnmarshaler
+
+Make your `uuid.UUID` type implement the [encoding.BinaryUnmarshaler](https://pkg.go.dev/encoding#BinaryUnmarshaler) interface:
+
+```golang
+package uuid 
+
+func (receiver *UUID) UnmarshalBinary(text []byte) error {
 	//@TODO
 }
 ```
