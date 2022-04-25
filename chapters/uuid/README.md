@@ -6,6 +6,8 @@ by [Charles Iliya Krempeaux](http://changelog.ca/)
 
 A **UUID** (short for **universally unique identifier**) is a popular convention for creating **globally unique identifiers** (**GUID**s).
 
+(There are other conversions for creating **globally unique identifiers** (**GUID**s) too, that are _not_ **UUID** (short for **universally unique identifier**).)
+
 (A **globally unique identifier** (**GUID**) would be contrasted against a **locally unique identifier**.)
 
 When written, **UUID**s tend to look like these
