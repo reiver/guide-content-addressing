@@ -164,6 +164,67 @@ func TestCreate(t *testing.T) {
 }
 ```
 
+## fmt.Stringer
+
+Now you are going to make your `uuid.UUID` type implement [fmt.Stringer](https://pkg.go.dev/fmt#Stringer).
+```golang
+package uuid 
+
+func (receiver UUID) String() string {
+	//@TODO
+}
+```
+
+Your `String()` method will return your **UUID** in the **canonical** UUID format.
+
+So, for example, if you created a **UUID** with a call like this:
+```golang
+value := uuid.Create(0xed, 0x7b, 0xa4, 0x70, 0x8e, 0x54, 0x46, 0x5e, 0x82, 0x5c, 0x99, 0x71, 0x20, 0x43, 0xe0, 0x1c)
+```
+
+And thus `uuid.UUID.value` would have the value:
+```golang
+[16]byte{0xed, 0x7b, 0xa4, 0x70, 0x8e, 0x54, 0x46, 0x5e, 0x82, 0x5c, 0x99, 0x71, 0x20, 0x43, 0xe0, 0x1c}
+```
+
+Then your `String()` method would return:
+```golang
+"ed7ba470-8e54-465e-825c-99712043e01c"
+```
+
+## Unit Tests for fmt.Stringer
+
+Write _unit tests_ for your `uuid.UUID.String()` method.
+
+Here is some code to get you started:
+```golang
+func TestUUID_String(t *testing.T) {
+
+	tests := []struct{
+		UUID uuid.UUID
+		Expected string
+	}{
+		{
+			UUID: uuid.Create(0xed, 0x7b, 0xa4, 0x70, 0x8e, 0x54, 0x46, 0x5e, 0x82, 0x5c, 0x99, 0x71, 0x20, 0x43, 0xe0, 0x1c),
+			Expected: "ed7ba470-8e54-465e-825c-99712043e01c"
+		},
+		
+		//@TODO
+	}
+
+	for testNumber, test := range tests {
+		actual := test.UUID.String()
+		expected := test.Expected
+		
+		if expected != actual {
+			t.Errorf("For test #%d, is actual value is not what was expected.", testNumber)
+			t.Logf("EXPECTED: %s", expected)
+			t.Logf("ACTUAL:   %s", actual)
+			continue
+		}
+	}
+}
+```
 
 ## Random
 
@@ -210,33 +271,6 @@ func TestRandom(t *testing.T) {
 	}
 }
 ```
-
-## fmt.Stringer
-
-Now you are going to make your `uuid.UUID` type implement [fmt.Stringer](https://pkg.go.dev/fmt#Stringer).
-```golang
-package uuid 
-
-func (receiver UUID) String() string {
-	//@TODO
-}
-```
-
-Your `String()` method will return your **UUID** in the **canonical** UUID format.
-
-So, for example, if you had a `uuid.UUID.value` with the value:
-```golang
-[16]byte{0xed, 0x7b, 0xa4, 0x70, 0x8e, 0x54, 0x46, 0x5e, 0x82, 0x5c, 0x99, 0x71, 0x20, 0x43, 0xe0, 0x1c}
-```
-
-Then your `String()` method would return:
-```golang
-"ed7ba470-8e54-465e-825c-99712043e01c"
-```
-
-## Unit Tests for fmt.Stringer
-
-
 
 ## Chrono Random
 
