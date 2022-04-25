@@ -93,10 +93,11 @@ Keys & Values
 
 Other Content Addresses
 
-32. [UUID](chapters/uuid/README.md)
-33. UUID URN
-34. Chrono Random
-35. XIM
+32. Chrono Random
+33. [UUID](chapters/uuid/README.md)
+34. [UUID Generator](chapters/uuid-generator/README.md)
+35. UUID URN
+36. XIM
 
 Project
 
