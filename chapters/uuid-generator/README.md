@@ -308,6 +308,29 @@ func (receiver *UUID) MarshalText() (text []byte, err error) {
 This will return your **UUID** in the **canonical** format for **UUID**s.
 So, it will be similar to your `String()` method.
 
+## Unit Tests for Chrono Random
+
+Write _unit tests_ for your `uuid.ChronoRandom()` function, making sure that:
+
+* `uuid.UUID.values[6] & 0xf0` is equal to `0xf0`, and that 
+* `uuid.UUID.values[8] & 0xc0` is equal to `0x80`,
+
+… for any **UUID** that is returned from your `uuid.ChronoRandom()` function.
+
+Obviously this _unit test_ isn't going to test _all_ values returned from your `uuid.ChronoRandom()` function. But you can test a fix number of samples from your `uuid.ChronoRandom()` function. I.e., something like:
+```golang
+func TestChronoRandom(t *testing.T) {
+
+	const maxTests = 64
+
+	for testNumber:=0; testNumber<maxTests; testNumber++ {
+		var actual UUID = ChronoRandom()
+		
+		//@TODO
+	}
+}
+```
+
 ## encoding.TextUnmarshaler
 
 Make your `uuid.UUID` type implement the [encoding.TextUnmarshaler](https://pkg.go.dev/encoding#TextUnmarshaler) interface:
