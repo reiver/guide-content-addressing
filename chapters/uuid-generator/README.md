@@ -168,11 +168,11 @@ func Random() UUID {
 
 Your implementation should do the following:
 
-№1: set the values of each byte in `uuid.UUID.values` randomly,
+№1: set the values of each byte in `uuid.UUID.value` randomly,
 
-№2: set the most-significant 4-bits of `uuid.UUID.values[6]` to `0b0100`,
+№2: set the most-significant 4-bits of `uuid.UUID.value[6]` to `0b0100`,
 
-№3: set the most-significant 2 bits of `uuid.UUID.values[8]` to `0b10`
+№3: set the most-significant 2 bits of `uuid.UUID.value[8]` to `0b10`
 
 ## 
 
@@ -212,7 +212,7 @@ func (receiver UUID) String() string {
 
 Your `String()` method will return your **UUID** in the **canonical** UUID format.
 
-So, for example, if you had a `uuid.UUID.values` with the value:
+So, for example, if you had a `uuid.UUID.value` with the value:
 ```golang
 [16]byte{0xed, 0x7b, 0xa4, 0x70, 0x8e, 0x54, 0x46, 0x5e, 0x82, 0x5c, 0x99, 0x71, 0x20, 0x43, 0xe0, 0x1c}
 ```
@@ -241,11 +241,11 @@ Your implementation should do the following:
 
 №1: set the values of the first 6 bytes to the unix timestamp,
 
-№2: set the rest of the values of each byte in `uuid.UUID.values` randomly,
+№2: set the rest of the values of each byte in `uuid.UUID.value` randomly,
 
-№3: set the most-significant 4-bits of `uuid.UUID.values[6]` to `0b0100`,
+№3: set the most-significant 4-bits of `uuid.UUID.value[6]` to `0b0100`,
 
-№4: set the most-significant 2 bits of `uuid.UUID.values[8]` to `0b10`
+№4: set the most-significant 2 bits of `uuid.UUID.value[8]` to `0b10`
 
 ## encoding.TextMarshaler
 
