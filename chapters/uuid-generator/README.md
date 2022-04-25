@@ -359,6 +359,11 @@ func (receiver *UUID) MarshalBinary() (text []byte, err error) {
 }
 ```
 
+This should just return the sequence of bytes that `uuid.UUID.value` has — i.e., `uuid.UUID.value[:]`
+
+## Unit Tests for encoding.BinaryMarshaler
+
+
 ## encoding.BinaryUnmarshaler
 
 Make your `uuid.UUID` type implement the [encoding.BinaryUnmarshaler](https://pkg.go.dev/encoding#BinaryUnmarshaler) interface:
@@ -370,3 +375,5 @@ func (receiver *UUID) UnmarshalBinary(text []byte) error {
 	//@TODO
 }
 ```
+
+## Unit Tests for encoding.BinaryUnmarshaler
