@@ -101,4 +101,26 @@ Your implementation should do the following:
 
 №4: set the most-significant 2 bits of `uuid.UUID.values[8]` to `0b10`
 
+## encoding.TextMarshaler
 
+Make your `uuid.UUID` type implement the [encoding.TextMarshaler](https://pkg.go.dev/encoding#TextMarshaler) interface:
+
+```golang
+package uuid 
+
+func (receiver *UUID) MarshalText() (text []byte, err error) {
+	//@TODO
+}
+```
+
+## encoding.TextUnmarshaler
+
+Make your `uuid.UUID` type implement the [encoding.TextUnmarshaler](https://pkg.go.dev/encoding#TextUnmarshaler) interface:
+
+```golang
+package uuid 
+
+func (receiver *UUID) UnmarshalText(text []byte) error {
+	//@TODO
+}
+```
