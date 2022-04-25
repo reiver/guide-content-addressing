@@ -69,6 +69,18 @@ func Create(
 
 (You are going to write the code for this, and replace the `//@TODO` with the actual implementation.)
 
+So if I call:
+```golang
+value := uuid.Create(0xed, 0x7b, 0xa4, 0x70, 0x8e, 0x54, 0x46, 0x5e, 0x82, 0x5c, 0x99, 0x71, 0x20, 0x43, 0xe0, 0x1c)
+```
+
+Then I expect this to create the **UUID** `ed7ba470-8e54-465e-825c-99712043e01c`.
+
+Which would mean that the `uuid.UUID.value` array would have a value of:
+```golang
+[16]byte{0xed, 0x7b, 0xa4, 0x70, 0x8e, 0x54, 0x46, 0x5e, 0x82, 0x5c, 0x99, 0x71, 0x20, 0x43, 0xe0, 0x1c}
+```
+
 ## Unit Tests for Create
 
 Also, write _unit tests_ for your `uuid.Create()` function.
