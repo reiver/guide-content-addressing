@@ -10,9 +10,11 @@ There are other conventions for creating **globally unique identifiers** (**GUID
 (You can even make up your own convention.) 
 But in this chapter we will focus on **UUID**s.
 
-And more specifically, we are going to focus on generating our own **UUID**s.
+And more specifically, we are going to focus on generating our own **UUID**s (that are consistent with the IETF specification RFC 4122).
 
 **And you are going to write code to make this happen!**
+
+This guide will take you through this step-by-step. So, let's get started.
 
 ## Git Repository
 
@@ -41,7 +43,7 @@ type UUID struct {
 
 ## Create
 
-Create a function that will create `uuid.UUID` from 16 bytes:
+Now you are going to create a function called `Create` that will create `uuid.UUID` from 16 bytes:
 ```golang
 package uuid
 
@@ -83,7 +85,7 @@ Which would mean that the `uuid.UUID.value` array would have a value of:
 
 ## Unit Tests for Create
 
-Also, write _unit tests_ for your `uuid.Create()` function.
+Now, write _unit tests_ for your `uuid.Create()` function.
 
 Here is some code to get you started:
 ```golang
@@ -128,12 +130,12 @@ func TestCreate(t *testing.T) {
 			Expected: [16]byte{0xea, 0x35, 0x42, 0x7e, 0xc3, 0x9f 0x11, 0xec, 0x9d, 0x64, 0x02, 0x42, 0xac, 0x12, 0x00, 0x02},
 		},
 		
-		//@TODO
+		//@TODO: Add more test UUIDs
 	}
 
 	for testNumber, test := range tests {
 
-		actual := Create(
+		result := Create(
 			test.B0,
 			test.B1,
 			test.B2,
@@ -151,6 +153,7 @@ func TestCreate(t *testing.T) {
 			test.B14,
 			test.B15,
 		)
+		actual := result.value
 		
 		expected := test.Expected
 		
@@ -174,6 +177,8 @@ func (receiver UUID) String() string {
 	//@TODO
 }
 ```
+
+(You are going to write the code for this, and replace the `//@TODO` with the actual implementation.)
 
 Your `String()` method will return your **UUID** in the **canonical** UUID format.
 
@@ -209,7 +214,7 @@ func TestUUID_String(t *testing.T) {
 			Expected: "ed7ba470-8e54-465e-825c-99712043e01c"
 		},
 		
-		//@TODO
+		//@TODO: Add more test UUIDs
 	}
 
 	for testNumber, test := range tests {
@@ -247,11 +252,9 @@ Your implementation should do the following:
 
 №3: set the most-significant 2 bits of `uuid.UUID.value[8]` to `0b10`
 
-## 
-
 ## Unit Tests for Random
 
-Also, write _unit tests_ for your `uuid.Random()` function, making sure that:
+Now you will write _unit tests_ for your `uuid.Random()` function, making sure that:
 
 * `uuid.UUID.values[6] & 0xf0` is equal to `0xf0`, and that 
 * `uuid.UUID.values[8] & 0xc0` is equal to `0x80`,
@@ -283,6 +286,8 @@ func ChronoRandom() UUID {
 }
 ```
 
+(You are going to write the code for this, and replace the `//@TODO` with the actual implementation.)
+
 Your implementation should do the following:
 
 №1: set the values of the first 6 bytes to the unix timestamp,
@@ -292,6 +297,8 @@ Your implementation should do the following:
 №3: set the most-significant 4-bits of `uuid.UUID.value[6]` to `0b0100`,
 
 №4: set the most-significant 2 bits of `uuid.UUID.value[8]` to `0b10`
+
+## Unit Tests for Chrono Random
 
 ## encoding.TextMarshaler
 
