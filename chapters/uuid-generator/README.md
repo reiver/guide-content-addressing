@@ -16,6 +16,28 @@ And more specifically, we are going to focus on generating our own **UUID**s (th
 
 This guide will take you through this step-by-step. So, let's get started.
 
+## Sections
+
+* Git Repository
+* Type
+* Create
+* Unit Tests for Create
+* fmt.Stringer
+* Unit Tests for fmt.Stringer
+* Random
+* Unit Tests for Random
+* Chrono Random
+* Unit Tests for Chrono Random
+* encoding.TextMarshaler
+* Unit Tests for encoding.Textmarshaler
+* encoding.TextUnmarshaler
+* Unit Tests for encoding.TextUnmarshaler
+* encoding.BinaryMarshaler
+* Unit Tests for encoding.BinaryMarshaler
+* encoding.BinaryUnmarshaler
+* Unit Tests for encoding.BinaryUnmarshaler
+
+
 ## Git Repository
 
 Create a new git repository for this called `go-uuid`
